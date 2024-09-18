@@ -1,11 +1,9 @@
-# Welcome to your Jupyter Book
+# Diffusion Models For Statistics
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+Welcome! This is an ongoing project which teaches at statistics students to explore the fundamentals and applications of diffusion models. The mini-book covers theoretical foundations, practical implementations, and diverse applications of diffusion models in research. It should align with the *diffusion models research presentation series* in the **Statistics Club** event of **Indiana University**. 
 
-Check out the content pages bundled with this sample book to see more.
+
+Check out the content pages bundled with this mini-book to see more.
 
 ```{tableofcontents}
 ```
