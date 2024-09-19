@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Markdown Files &#8212; Diffusion Models for Statistics</title>
+    <title>Chapter 1: Non-equilibrium Thermodynamics &#8212; Diffusion Models for Statistics</title>
   
   
   
@@ -61,7 +61,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Notebooks with MyST Markdown" href="chapter2.html" />
-    <link rel="prev" title="Here’s my sample title" href="chapter0.html" />
+    <link rel="prev" title="Chapter 0: Gental Review on Key Concepts" href="chapter0.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -180,9 +180,8 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="chapter0.html">Here’s my sample title</a></li>
-
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter0.html">Chapter 0: Gental Review on Key Concepts</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 1: Non-equilibrium Thermodynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter2.html">Notebooks with MyST Markdown</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
 </ul>
@@ -370,7 +369,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Markdown Files</h1>
+    <h1>Chapter 1: Non-equilibrium Thermodynamics</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -395,12 +394,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="markdown-files">
-<h1>Markdown Files<a class="headerlink" href="#markdown-files" title="Link to this heading">#</a></h1>
-<p>Whether you write your book’s content in Jupyter Notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) or
-in regular markdown files (<code class="docutils literal notranslate"><span class="pre">.md</span></code>), you’ll write in the same flavor of markdown
-called <strong>MyST Markdown</strong>.
-This is a simple file to help you get started and show off some syntax.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="chapter-1-non-equilibrium-thermodynamics">
+<span id="chapter1-0"></span><h1>Chapter 1: Non-equilibrium Thermodynamics<a class="headerlink" href="#chapter-1-non-equilibrium-thermodynamics" title="Link to this heading">#</a></h1>
+<p>In this chapter, we’ll study the fundamental paper of <span id="id1">[<a class="reference internal" href="#id4" title="Jascha Sohl-Dickstein, Eric Weiss, Niru Maheswaranathan, and Surya Ganguli. Deep unsupervised learning using nonequilibrium thermodynamics. In International conference on machine learning, 2256–2265. PMLR, 2015.">SDWMG15</a>]</span>, which
+introduced diffusion models a method to learn a model that can sample from a
+highly complex probability distribution.</p>
 <section id="what-is-myst">
 <h2>What is MyST?<a class="headerlink" href="#what-is-myst" title="Link to this heading">#</a></h2>
 <p>MyST stands for “Markedly Structured Text”. It
@@ -429,17 +427,17 @@ that is being called.</p>
 <h2>Citations<a class="headerlink" href="#citations" title="Link to this heading">#</a></h2>
 <p>You can also cite references that are stored in a <code class="docutils literal notranslate"><span class="pre">bibtex</span></code> file. For example,
 the following syntax: <code class="docutils literal notranslate"><span class="pre">{cite}`holdgraf_evidence_2014`</span></code> will render like
-this: <span id="id1">[<a class="reference internal" href="#id3" title="Christopher Ramsay Holdgraf, Wendy de Heer, Brian N. Pasley, and Robert T. Knight. Evidence for Predictive Coding in Human Auditory Cortex. In International Conference on Cognitive Neuroscience. Brisbane, Australia, Australia, 2014. Frontiers in Neuroscience.">HdHPK14</a>]</span>.</p>
+this: <span id="id2">[]</span>.</p>
 <p>Moreover, you can insert a bibliography into your page with this syntax:
 The <code class="docutils literal notranslate"><span class="pre">{bibliography}</span></code> directive must be used for all the <code class="docutils literal notranslate"><span class="pre">{cite}</span></code> roles to
 render properly.
 For example, if the references for your book are stored in <code class="docutils literal notranslate"><span class="pre">references.bib</span></code>,
 then the bibliography is inserted with:</p>
-<div class="docutils container" id="id2">
+<div class="docutils container" id="id3">
 <div role="list" class="citation-list">
-<div class="citation" id="id3" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">HdHPK14</a><span class="fn-bracket">]</span></span>
-<p>Christopher Ramsay Holdgraf, Wendy de Heer, Brian N. Pasley, and Robert T. Knight. Evidence for Predictive Coding in Human Auditory Cortex. In <em>International Conference on Cognitive Neuroscience</em>. Brisbane, Australia, Australia, 2014. Frontiers in Neuroscience.</p>
+<div class="citation" id="id4" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">SDWMG15</a><span class="fn-bracket">]</span></span>
+<p>Jascha Sohl-Dickstein, Eric Weiss, Niru Maheswaranathan, and Surya Ganguli. Deep unsupervised learning using nonequilibrium thermodynamics. In <em>International conference on machine learning</em>, 2256–2265. PMLR, 2015.</p>
 </div>
 </div>
 </div>
@@ -487,7 +485,7 @@ You can learn a lot more at <a class="reference external" href="https://jupyterb
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Here’s my sample title</p>
+        <p class="prev-next-title">Chapter 0: Gental Review on Key Concepts</p>
       </div>
     </a>
     <a class="right-next"
