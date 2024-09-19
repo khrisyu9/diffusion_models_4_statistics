@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Here’s my sample title &#8212; Diffusion Models for Statistics</title>
+    <title>Chapter 0: Gental Review on Key Concepts &#8212; Diffusion Models for Statistics</title>
   
   
   
@@ -57,10 +57,12 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter0';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Markdown Files" href="chapter1.html" />
+    <link rel="next" title="Chapter 1: Non-equilibrium Thermodynamics" href="chapter1.html" />
     <link rel="prev" title="Diffusion Models For Statistics" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -180,9 +182,8 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Here’s my sample title</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="chapter1.html">Markdown Files</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 0: Gental Review on Key Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter1.html">Chapter 1: Non-equilibrium Thermodynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter2.html">Notebooks with MyST Markdown</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
 </ul>
@@ -370,7 +371,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Here’s my sample title</h1>
+    <h1>Chapter 0: Gental Review on Key Concepts</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -380,19 +381,30 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Here’s my sample title</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#here-s-my-first-section">Here’s my first section</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-distributions">1. <strong>Probability Distributions</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#markov-chains">2. <strong>Markov Chains</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-properties">Key Properties:</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown-files">Markdown Files</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-myst">What is MyST?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-roles-and-directives">Sample Roles and Directives</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citations">Citations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learn-more">Learn more</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diffusion-process">3. <strong>Diffusion Process</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#score-matching">4. <strong>Score Matching</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stochastic-processes">5. <strong>Stochastic Processes</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wiener-process">Wiener Process:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ito-calculus">Ito Calculus:</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kl-divergence">6. <strong>KL Divergence</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variational-inference">7. <strong>Variational Inference</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evidence-lower-bound-elbo">Evidence Lower Bound (ELBO):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#breakdown-of-the-elbo">Breakdown of the ELBO:</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#monte-carlo-sampling">8. <strong>Monte Carlo Sampling</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimating-expectations">Estimating Expectations:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remarks">9. Remarks</a></li>
+</ul>
             </nav>
         </div>
     </div>
@@ -403,67 +415,211 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="here-s-my-sample-title">
-<h1>Here’s my sample title<a class="headerlink" href="#here-s-my-sample-title" title="Link to this heading">#</a></h1>
-<p>This is some sample text.</p>
-<section id="here-s-my-first-section">
-<span id="section-label"></span><h2>Here’s my first section<a class="headerlink" href="#here-s-my-first-section" title="Link to this heading">#</a></h2>
-<p>Here is a <a class="reference internal" href="intro.html"><span class="std std-doc">reference to the intro</span></a>. Here is a reference to <a class="reference internal" href="#section-label"><span class="std std-ref">Here’s my first section</span></a>.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="chapter-0-gental-review-on-key-concepts">
+<span id="chapter0-0"></span><h1>Chapter 0: Gental Review on Key Concepts<a class="headerlink" href="#chapter-0-gental-review-on-key-concepts" title="Link to this heading">#</a></h1>
+<p>Before diving into the fascinating world of diffusion models, let’s have the refresher
+of some key concepts in diffusion models, which would be useful later on. Notice that
+here we just briefly touch the <a class="reference internal" href="#chapter0-3"><span class="std std-ref"><strong>forward process</strong></span></a> and [<strong>reverse process</strong>]
+intuitively.  We’ll have detailed explanation about them in <a class="reference internal" href="#chapter2.0"><span class="xref myst"><strong>Chapter 2</strong></span></a>.
+Similarly, <a class="reference internal" href="#chapter0-4"><span class="std std-ref"><strong>score function</strong></span></a> as a commonly used objective function in
+diffusion models will be emphasized in following chapters.</p>
+<section id="probability-distributions">
+<span id="chapter0-1"></span><h2>1. <strong>Probability Distributions</strong><a class="headerlink" href="#probability-distributions" title="Link to this heading">#</a></h2>
+<p>Diffusion models are heavily based on probabilistic methods, making an understanding of probability distributions essential. The most important distribution is:</p>
+<ul>
+<li><p><strong>Gaussian (Normal) Distribution</strong>:</p>
+<ul>
+<li><p>Used in the noise processes of diffusion models.</p></li>
+<li><p>Defined by mean <span class="math notranslate nohighlight">\(\mu\)</span> and variance <span class="math notranslate nohighlight">\(\sigma^2\)</span>, denoted as <span class="math notranslate nohighlight">\( \mathcal{N}(\mu, \sigma^2) \)</span>.</p></li>
+<li><p>Probability density function (PDF):</p>
+<div class="math notranslate nohighlight">
+\[p(x) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left(-\frac{(x - \mu)^2}{2\sigma^2}\right).\]</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="markov-chains">
+<span id="chapter0-2"></span><h2>2. <strong>Markov Chains</strong><a class="headerlink" href="#markov-chains" title="Link to this heading">#</a></h2>
+<p>A <strong>Markov chain</strong> is a type of stochastic process that moves through a series of states, where the probability of transitioning to the next state depends only on the current state (and not on the history of states). This <strong>“memoryless”</strong> property is fundamental in modeling processes such as the noise injection in diffusion models.</p>
+<section id="key-properties">
+<h3>Key Properties:<a class="headerlink" href="#key-properties" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Transition Probability</strong>:</p>
+<ul>
+<li><p>Describes the probability of moving from one state to another.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(X_t\)</span> is the current state at time <span class="math notranslate nohighlight">\(t\)</span>, then the transition probability is:</p>
+<div class="math notranslate nohighlight">
+\[P(X_{t+1} = x' | X_t = x) = P(x' | x).\]</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Markov Property</strong>:</p>
+<ul>
+<li><p>Future states depend <u>only on the present state</u>, not past states.</p>
+<div class="math notranslate nohighlight">
+\[P(X_{t+1} | X_t, X_{t-1}, \dots, X_0) = P(X_{t+1} | X_t)\]</div>
+</li>
+</ul>
+</li>
+</ul>
+<p>A <strong>stationary distribution</strong> is a probability distribution that remains constant in a Markov chain as it transitions between states. If a Markov chain reaches its stationary distribution, further transitions do not change the overall distribution of states.</p>
 </section>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="markdown-files">
-<h1>Markdown Files<a class="headerlink" href="#markdown-files" title="Link to this heading">#</a></h1>
-<p>Whether you write your book’s content in Jupyter Notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) or
-in regular markdown files (<code class="docutils literal notranslate"><span class="pre">.md</span></code>), you’ll write in the same flavor of markdown
-called <strong>MyST Markdown</strong>.
-This is a simple file to help you get started and show off some syntax.</p>
-<section id="what-is-myst">
-<h2>What is MyST?<a class="headerlink" href="#what-is-myst" title="Link to this heading">#</a></h2>
-<p>MyST stands for “Markedly Structured Text”. It
-is a slight variation on a flavor of markdown called “CommonMark” markdown,
-with small syntax extensions to allow you to write <strong>roles</strong> and <strong>directives</strong>
-in the Sphinx ecosystem.</p>
-<p>For more about MyST, see <a class="reference external" href="https://jupyterbook.org/content/myst.html">the MyST Markdown Overview</a>.</p>
+<section id="diffusion-process">
+<span id="chapter0-3"></span><h2>3. <strong>Diffusion Process</strong><a class="headerlink" href="#diffusion-process" title="Link to this heading">#</a></h2>
+<p>A diffusion process describes the spread of particles (or probabilities) over time. The <strong>forward process</strong> introduces noise, while the <strong>reverse process</strong> denoises to recover a clear sample:</p>
+<ul>
+<li><p><strong>Forward Process</strong>:</p>
+<div class="math notranslate nohighlight">
+\[q(x_t | x_{t-1}) = \mathcal{N}(x_t; \sqrt{\alpha_t} x_{t-1}, (1-\alpha_t)I)\]</div>
+</li>
+</ul>
+<figure class="align-default" id="markov-chain-forward-process">
+<a class="reference internal image-reference" href="../images/markov_chain.png"><img alt="../images/markov_chain.png" src="../images/markov_chain.png" style="height: 80px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">With certain transition probability <span class="math notranslate nohighlight">\(q\)</span>, the <strong>forward process</strong> gradually add noise to the image <span class="math notranslate nohighlight">\(x_0\)</span> since time <span class="math notranslate nohighlight">\(t=0\)</span>, and finally it becomes pure noise <span class="math notranslate nohighlight">\(x_T\)</span> at time <span class="math notranslate nohighlight">\(T\)</span>.</span><a class="headerlink" href="#markov-chain-forward-process" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ul>
+<li><p><strong>Reverse Process</strong>:</p>
+<div class="math notranslate nohighlight">
+\[p(x_{t-1} | x_t) = \mathcal{N}(x_{t-1}; \mu_\theta(x_t, t), \Sigma_\theta(t))\]</div>
+</li>
+</ul>
 </section>
-<section id="sample-roles-and-directives">
-<h2>Sample Roles and Directives<a class="headerlink" href="#sample-roles-and-directives" title="Link to this heading">#</a></h2>
-<p>Roles and directives are two of the most powerful tools in Jupyter Book. They
-are like functions, but written in a markup language. They both
-serve a similar purpose, but <strong>roles are written in one line</strong>, whereas
-<strong>directives span many lines</strong>. They both accept different kinds of inputs,
-and what they do with those inputs depends on the specific role or directive
-that is being called.</p>
-<p>Here is a “note” directive:</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Here is a note</p>
-</div>
-<p>It will be rendered in a special box when you build your book.</p>
-<p>Here is an inline directive to refer to a document: <span class="xref std std-doc">markdown-notebooks</span>.</p>
+<section id="score-matching">
+<span id="chapter0-4"></span><h2>4. <strong>Score Matching</strong><a class="headerlink" href="#score-matching" title="Link to this heading">#</a></h2>
+<p>In diffusion models, score matching helps recover the score function (gradient of log-probability):</p>
+<ul>
+<li><p><strong>Score Function</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\nabla_x \log p(x)\]</div>
+<p>The score function is used to guide the <strong>reverse process</strong> back to the original data distribution.</p>
+</li>
+</ul>
 </section>
-<section id="citations">
-<h2>Citations<a class="headerlink" href="#citations" title="Link to this heading">#</a></h2>
-<p>You can also cite references that are stored in a <code class="docutils literal notranslate"><span class="pre">bibtex</span></code> file. For example,
-the following syntax: <code class="docutils literal notranslate"><span class="pre">{cite}`holdgraf_evidence_2014`</span></code> will render like
-this: <span id="id1">[<a class="reference internal" href="chapter1.html#id3" title="Christopher Ramsay Holdgraf, Wendy de Heer, Brian N. Pasley, and Robert T. Knight. Evidence for Predictive Coding in Human Auditory Cortex. In International Conference on Cognitive Neuroscience. Brisbane, Australia, Australia, 2014. Frontiers in Neuroscience.">HdHPK14</a>]</span>.</p>
-<p>Moreover, you can insert a bibliography into your page with this syntax:
-The <code class="docutils literal notranslate"><span class="pre">{bibliography}</span></code> directive must be used for all the <code class="docutils literal notranslate"><span class="pre">{cite}</span></code> roles to
-render properly.
-For example, if the references for your book are stored in <code class="docutils literal notranslate"><span class="pre">references.bib</span></code>,
-then the bibliography is inserted with:</p>
-<div class="docutils container" id="id2">
-<div role="list" class="citation-list">
-<div class="citation" id="id3" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">HdHPK14</a><span class="fn-bracket">]</span></span>
-<p>Christopher Ramsay Holdgraf, Wendy de Heer, Brian N. Pasley, and Robert T. Knight. Evidence for Predictive Coding in Human Auditory Cortex. In <em>International Conference on Cognitive Neuroscience</em>. Brisbane, Australia, Australia, 2014. Frontiers in Neuroscience.</p>
-</div>
-</div>
-</div>
+<section id="stochastic-processes">
+<span id="chapter0-5"></span><h2>5. <strong>Stochastic Processes</strong><a class="headerlink" href="#stochastic-processes" title="Link to this heading">#</a></h2>
+<p>A <strong>stochastic process</strong> describes systems evolving over time under random influences. Important stochastic tools include:</p>
+<section id="wiener-process">
+<h3>Wiener Process:<a class="headerlink" href="#wiener-process" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Wiener Process</strong>, also known as <strong>Brownian motion</strong>, is a continuous-time stochastic process with the following properties:
+i. <strong>Initial value</strong>: <span class="math notranslate nohighlight">\(W(0) = 0\)</span>.
+ii. <strong>Independent increments</strong>: The increments <span class="math notranslate nohighlight">\(W(t) - W(s)\)</span> are independent for <span class="math notranslate nohighlight">\(t &gt; s\)</span>.
+iii. <strong>Normally distributed increments</strong>: For <span class="math notranslate nohighlight">\(t &gt; s\)</span>, the increment <span class="math notranslate nohighlight">\(W(t) - W(s)\)</span> is distributed as <span class="math notranslate nohighlight">\(\mathcal{N}(0, t - s)\)</span>.
+iv. <strong>Continuous paths</strong>: The function <span class="math notranslate nohighlight">\(W(t)\)</span> is continuous in <span class="math notranslate nohighlight">\(t\)</span>, though it is non-differentiable at any point.</p></li>
+<li><p>The Wiener process is the core building block of <strong>stochastic differential equations (SDEs)</strong>, which are used to model noise in diffusion models.
+The Wiener process <span class="math notranslate nohighlight">\(W(t)\)</span> satisfies the stochastic differential equation:</p>
+<div class="math notranslate nohighlight">
+\[dW(t) = \mathcal{N}(0, dt)\]</div>
+</li>
+<li><p>This means that over a small time interval <span class="math notranslate nohighlight">\(dt\)</span>, the change in the process is normally distributed with mean zero and variance proportional to <span class="math notranslate nohighlight">\(dt\)</span>.</p></li>
+</ul>
 </section>
-<section id="learn-more">
-<h2>Learn more<a class="headerlink" href="#learn-more" title="Link to this heading">#</a></h2>
-<p>This is just a simple starter to get you started.
-You can learn a lot more at <a class="reference external" href="https://jupyterbook.org">jupyterbook.org</a>.</p>
+<section id="ito-calculus">
+<h3>Ito Calculus:<a class="headerlink" href="#ito-calculus" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Ito Calculus</strong> is a branch of stochastic calculus that extends traditional calculus to deal with the randomness introduced by processes like the Wiener process. It is specifically designed to handle stochastic differential equations (SDEs), which are central to diffusion models.</p></li>
+<li><p><strong>Ito’s Lemma</strong> is the stochastic calculus counterpart of the chain rule in classical calculus. If ( f ) is a twice-differentiable function and ( X_t ) is a stochastic process described by the SDE:
+[
+dX_t = \mu(X_t, t) dt + \sigma(X_t, t) dW_t
+]
+Then Ito’s Lemma gives the differential for ( f(X_t, t) ):
+[
+df(X_t, t) = \frac{\partial f}{\partial X_t} dX_t + \frac{\partial f}{\partial t} dt + \frac{1}{2} \sigma^2(X_t, t) \frac{\partial^2 f}{\partial X_t^2} dt
+]</p></li>
+<li><p>The <strong>Ito integral</strong> is defined differently from classical Riemann integrals due to the non-differentiability of the Wiener process. For a stochastic process ( X(t) ) and a Wiener process ( W(t) ), the Ito integral is written as:
+[
+\int_0^t X(s) dW(s)
+]
+This integral represents the cumulative effect of random fluctuations up to time ( t ), and it is used to solve SDEs.</p></li>
+<li><p>In the context of diffusion models, the <strong>stochastic differential equations</strong> describe the evolution of the data as it undergoes noise injection or denoising. These equations typically take the form:
+[
+dx_t = \mu(x_t, t) dt + \sigma(t) dW_t
+]
+where:</p>
+<ul>
+<li><p>( \mu(x_t, t) ) represents the deterministic drift term (direction of movement),</p></li>
+<li><p>( \sigma(t) ) represents the volatility or noise intensity,</p></li>
+<li><p>( dW_t ) is the Wiener process term that introduces randomness.
+In the <strong>reverse process</strong> of diffusion models, solving these SDEs using Ito calculus helps to recover the original data distribution by progressively removing noise.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="kl-divergence">
+<span id="id1"></span><h2>6. <strong>KL Divergence</strong><a class="headerlink" href="#kl-divergence" title="Link to this heading">#</a></h2>
+<p>The <strong>Kullback-Leibler (KL) Divergence</strong> measures the difference between two probability distributions (P) and (Q):</p>
+<p>[
+D_{KL}(P || Q) = \int P(x) \log \frac{P(x)}{Q(x)} dx
+]</p>
+<p>KL divergence is often used in diffusion models to minimize the difference between the true distribution and the model distribution.</p>
+</section>
+<section id="variational-inference">
+<span id="chapter0-7"></span><h2>7. <strong>Variational Inference</strong><a class="headerlink" href="#variational-inference" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Variational Inference</strong> (VI) is a technique used in probabilistic models to approximate complex, intractable probability distributions with simpler, tractable ones. In diffusion models, VI is crucial for learning the parameters of the reverse process, which transforms noisy data back into clean data. The goal is to approximate the true posterior distribution ( p(x_{1:T} | x_0) ) (i.e., the reverse process) using a variational distribution ( q(x_{1:T} | x_0) ), which is simpler to compute.</p></li>
+</ul>
+<section id="evidence-lower-bound-elbo">
+<h3>Evidence Lower Bound (ELBO):<a class="headerlink" href="#evidence-lower-bound-elbo" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The objective in variational inference is to maximize the <strong>Evidence Lower Bound (ELBO)</strong>, a quantity that provides a lower bound to the likelihood of the observed data. Maximizing the ELBO indirectly helps approximate the true posterior distribution.</p></li>
+<li><p>The ELBO is given by:
+[
+\mathcal{L} = \mathbb{E}<em>q \left[ \log p</em>\theta(x_0 | x_t) - D_{KL}(q(x_{1:T} | x_0) || p_\theta(x_{1:T})), \right]
+]
+where:</p>
+<ul>
+<li><p>( p_\theta(x_0 | x_t) ): The likelihood of the data given the noisy version at time ( t ), parameterized by ( \theta ).</p></li>
+<li><p>( D_{KL}(q || p) ): The Kullback-Leibler (KL) divergence between the variational distribution ( q(x_{1:T} | x_0) ) and the model distribution ( p_\theta(x_{1:T}) ), which measures how different these two distributions are.</p></li>
+<li><p>( x_0 ): The original (clean) data.</p></li>
+<li><p>( x_t ): The noisy data at time step ( t ).</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="breakdown-of-the-elbo">
+<h3>Breakdown of the ELBO:<a class="headerlink" href="#breakdown-of-the-elbo" title="Link to this heading">#</a></h3>
+<p>i. <strong>Reconstruction Term</strong>:</p>
+<ul class="simple">
+<li><p>( \log p_\theta(x_0 | x_t) ) encourages the model to generate samples ( x_0 ) that closely resemble the original clean data given the noisy data ( x_t ). It measures how well the model can reconstruct clean data from noisy observations.</p></li>
+</ul>
+<p>ii. <strong>KL Divergence Term</strong>:</p>
+<ul class="simple">
+<li><p>( D_{KL}(q(x_{1:T} | x_0) || p_\theta(x_{1:T})) ) penalizes the difference between the learned reverse process (the variational approximation) and the true posterior distribution. Minimizing this term helps align the learned process with the actual data-generating process.</p></li>
+<li><p>In diffusion models, the <strong>forward process</strong> gradually adds noise to data, leading to a tractable Gaussian distribution at the final step. The <strong>reverse process</strong>, however, is intractable. Using variational inference allows the model to <strong>approximate the reverse process</strong>, and by maximizing the ELBO, it becomes better at denoising, generating samples that are close to the original data distribution. This is critical for high-quality image or data generation in diffusion models.</p></li>
+</ul>
+</section>
+</section>
+<section id="monte-carlo-sampling">
+<span id="chapter0-8"></span><h2>8. <strong>Monte Carlo Sampling</strong><a class="headerlink" href="#monte-carlo-sampling" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Monte Carlo Sampling</strong> is a numerical method used to estimate expectations of functions or integrals when direct computation is infeasible. In the context of diffusion models, Monte Carlo methods allow for the approximation of various quantities, such as expectations over complex distributions, by drawing random samples from these distributions.</p></li>
+</ul>
+<section id="estimating-expectations">
+<h3>Estimating Expectations:<a class="headerlink" href="#estimating-expectations" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>In many cases, the exact expectation ( \mathbb{E}[f(x)] ) under some probability distribution ( p(x) ) is difficult to compute analytically. Instead, Monte Carlo methods estimate this expectation by drawing samples ( x_1, x_2, \dots, x_N ) from the distribution ( p(x) ), and using the empirical average:
+[
+\mathbb{E}[f(x)] \approx \frac{1}{N} \sum_{i=1}^{N} f(x_i),
+]
+where:</p>
+<ul>
+<li><p>( f(x) ): A function whose expectation you want to compute.</p></li>
+<li><p>( N ): The number of samples drawn.</p></li>
+<li><p>( x_i ): Samples drawn from the distribution ( p(x) ).</p></li>
+</ul>
+</li>
+<li><p>In diffusion models, during training (<strong>forward process</strong>), random noise is added to the data at each time step ( t ), typically sampled from a Gaussian distribution. Monte Carlo Sampling can be used to approximate how this noise impacts the data; Monte Carlo Sampling can be employed to approximate the <strong>reverse process</strong> by drawing samples from the variational posterior ( q(x_{1:T} | x_0) ), especially when computing the expectation over possible latent variables or noisy data.</p></li>
+</ul>
+</section>
+</section>
+<section id="remarks">
+<span id="chapter0-9"></span><h2>9. Remarks<a class="headerlink" href="#remarks" title="Link to this heading">#</a></h2>
+<p>Notice that all the terminologies above are brief and at a introductory level, and are by no means rigorous definitions. If you want to know more about them, please refer to the <strong>Wikipedia page</strong> of those concepts. Cheers!</p>
 </section>
 </section>
 
@@ -511,7 +667,7 @@ You can learn a lot more at <a class="reference external" href="https://jupyterb
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Markdown Files</p>
+        <p class="prev-next-title">Chapter 1: Non-equilibrium Thermodynamics</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -531,19 +687,30 @@ You can learn a lot more at <a class="reference external" href="https://jupyterb
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Here’s my sample title</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#here-s-my-first-section">Here’s my first section</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-distributions">1. <strong>Probability Distributions</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#markov-chains">2. <strong>Markov Chains</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-properties">Key Properties:</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown-files">Markdown Files</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-myst">What is MyST?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-roles-and-directives">Sample Roles and Directives</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citations">Citations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learn-more">Learn more</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diffusion-process">3. <strong>Diffusion Process</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#score-matching">4. <strong>Score Matching</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stochastic-processes">5. <strong>Stochastic Processes</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wiener-process">Wiener Process:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ito-calculus">Ito Calculus:</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kl-divergence">6. <strong>KL Divergence</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variational-inference">7. <strong>Variational Inference</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evidence-lower-bound-elbo">Evidence Lower Bound (ELBO):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#breakdown-of-the-elbo">Breakdown of the ELBO:</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#monte-carlo-sampling">8. <strong>Monte Carlo Sampling</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimating-expectations">Estimating Expectations:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remarks">9. Remarks</a></li>
+</ul>
   </nav></div>
 
 </div></div>

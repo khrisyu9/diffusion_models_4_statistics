@@ -19,6 +19,16 @@ latex:
 bibtex_bibfiles:
   - references.bib
 
+# Configuration for MathJax
+mathjax:
+  options:
+    processEscapes: false
+    processEnvironments: true
+  tex:
+    inlineMath: [["\\(", "\\)"], ["$", "$"]]
+    displayMath: [["\\[", "\\]"], ["$$", "$$"]]
+    processEnvironments: true
+
 # Information about where the book exists on the web
 repository:
   url: https://github.com/executablebooks/jupyter-book  # Online location of your book

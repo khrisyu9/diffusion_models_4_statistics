@@ -15,11 +15,11 @@ Diffusion models are heavily based on probabilistic methods, making an understan
 
 - **Gaussian (Normal) Distribution**: 
   - Used in the noise processes of diffusion models.
-  - Defined by mean \(\mu\) and variance \(\sigma^2\), denoted as \( \mathcal{N}(\mu, \sigma^2) \).
+  - Defined by mean $\mu$ and variance $\sigma^2$, denoted as $ \mathcal{N}(\mu, \sigma^2) $.
   - Probability density function (PDF):
-    \[
-    p(x) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left(-\frac{(x - \mu)^2}{2\sigma^2}\right)
-    \]
+    ```{math}
+    p(x) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left(-\frac{(x - \mu)^2}{2\sigma^2}\right).
+    ```
 
 
 (chapter0.2)=
@@ -29,15 +29,15 @@ A **Markov chain** is a type of stochastic process that moves through a series o
 ### Key Properties:
 - **Transition Probability**: 
   - Describes the probability of moving from one state to another.
-  - If \( X_t \) is the current state at time \( t \), then the transition probability is:
-    \[
-    P(X_{t+1} = x' | X_t = x) = P(x' | x)
-    \]
+  - If $X_t$ is the current state at time $t$, then the transition probability is:
+    ```{math}
+    P(X_{t+1} = x' | X_t = x) = P(x' | x).
+    ```
 - **Markov Property**: 
   - Future states depend <u>only on the present state</u>, not past states.
-    \[
+    ```{math}
     P(X_{t+1} | X_t, X_{t-1}, \dots, X_0) = P(X_{t+1} | X_t)
-    \]
+    ```
 
 A **stationary distribution** is a probability distribution that remains constant in a Markov chain as it transitions between states. If a Markov chain reaches its stationary distribution, further transitions do not change the overall distribution of states.
 
@@ -47,27 +47,31 @@ A **stationary distribution** is a probability distribution that remains constan
 A diffusion process describes the spread of particles (or probabilities) over time. The **forward process** introduces noise, while the **reverse process** denoises to recover a clear sample:
 
 - **Forward Process**:
-  \[
+  ```{math}
   q(x_t | x_{t-1}) = \mathcal{N}(x_t; \sqrt{\alpha_t} x_{t-1}, (1-\alpha_t)I)
-  \]
+  ```
   
-  <img src="markov_chain.png" alt="Markov Chain in the Forward Process" width="300">
-  <p align="center">With certain transition probability $q$, the **forward process** gradually add noise to the image $x_0$ since time $t=0$, and finally it becomes pure noise $x_T$ at time $T$.</p>
+```{figure} ../images/markov_chain.png
+:height: 80px
+:name: markov_chain_forward_process
+
+With certain transition probability $q$, the **forward process** gradually add noise to the image $x_0$ since time $t=0$, and finally it becomes pure noise $x_T$ at time $T$.
+```
   
 - **Reverse Process**:
-  \[
+  ```{math}
   p(x_{t-1} | x_t) = \mathcal{N}(x_{t-1}; \mu_\theta(x_t, t), \Sigma_\theta(t))
-  \]
+  ```
 
 
 (chapter0.4)=
-## 5. **Score Matching**
+## 4. **Score Matching**
 In diffusion models, score matching helps recover the score function (gradient of log-probability):
 
 - **Score Function**:
-  \[
+  ```{math}
   \nabla_x \log p(x)
-  \]
+  ```
   The score function is used to guide the **reverse process** back to the original data distribution.
 
 
@@ -77,17 +81,17 @@ A **stochastic process** describes systems evolving over time under random influ
 
 ### Wiener Process:
 - **Wiener Process**, also known as **Brownian motion**, is a continuous-time stochastic process with the following properties:
-  i. **Initial value**: \( W(0) = 0 \).
-  ii. **Independent increments**: The increments \( W(t) - W(s) \) are independent for \( t > s \).
-  iii. **Normally distributed increments**: For \( t > s \), the increment \( W(t) - W(s) \) is distributed as \( \mathcal{N}(0, t - s) \).
-  iv. **Continuous paths**: The function \( W(t) \) is continuous in \( t \), though it is non-differentiable at any point.
+  i. **Initial value**: $W(0) = 0$.
+  ii. **Independent increments**: The increments $W(t) - W(s)$ are independent for $t > s$.
+  iii. **Normally distributed increments**: For $t > s$, the increment $W(t) - W(s)$ is distributed as $\mathcal{N}(0, t - s)$.
+  iv. **Continuous paths**: The function $W(t)$ is continuous in $t$, though it is non-differentiable at any point.
   
 - The Wiener process is the core building block of **stochastic differential equations (SDEs)**, which are used to model noise in diffusion models.
-The Wiener process \( W(t) \) satisfies the stochastic differential equation:
-  \[
+The Wiener process $W(t)$ satisfies the stochastic differential equation:
+  ```{math}
   dW(t) = \mathcal{N}(0, dt)
-  \]
-- This means that over a small time interval \( dt \), the change in the process is normally distributed with mean zero and variance proportional to \( dt \).
+  ```
+- This means that over a small time interval $dt$, the change in the process is normally distributed with mean zero and variance proportional to $dt$.
 
 ### Ito Calculus:
 - **Ito Calculus** is a branch of stochastic calculus that extends traditional calculus to deal with the randomness introduced by processes like the Wiener process. It is specifically designed to handle stochastic differential equations (SDEs), which are central to diffusion models.
