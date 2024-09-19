@@ -95,10 +95,10 @@ The Wiener process $W(t)$ satisfies the stochastic differential equation:
 
 ### Ito Calculus:
 - **Ito Calculus** is a branch of stochastic calculus that extends traditional calculus to deal with the randomness introduced by processes like the Wiener process. It is specifically designed to handle stochastic differential equations (SDEs), which are central to diffusion models.
-- **Ito's Lemma** is the stochastic calculus counterpart of the chain rule in classical calculus. If \( f \) is a twice-differentiable function and \( X_t \) is a stochastic process described by the SDE:
-  \[
+- **Ito's Lemma** is the stochastic calculus counterpart of the chain rule in classical calculus. If $f$ is a twice-differentiable function and $X_t$ is a stochastic process described by the SDE:
+  ```{math}
 dX_t = \mu(X_t, t) dt + \sigma(X_t, t) dW_t
-  \]
+  ```
   Then Ito's Lemma gives the differential for \( f(X_t, t) \):
   \[
   df(X_t, t) = \frac{\partial f}{\partial X_t} dX_t + \frac{\partial f}{\partial t} dt + \frac{1}{2} \sigma^2(X_t, t) \frac{\partial^2 f}{\partial X_t^2} dt
