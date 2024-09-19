@@ -1,9 +1,9 @@
-# Markdown Files
+(chapter1.0)=
+# Chapter 1: Non-equilibrium Thermodynamics 
 
-Whether you write your book's content in Jupyter Notebooks (`.ipynb`) or
-in regular markdown files (`.md`), you'll write in the same flavor of markdown
-called **MyST Markdown**.
-This is a simple file to help you get started and show off some syntax.
+In this chapter, we'll study the fundamental paper of {cite}`sohl2015deep`, which
+introduced diffusion models a method to learn a model that can sample from a 
+highly complex probability distribution.
 
 ## What is MyST?
 
