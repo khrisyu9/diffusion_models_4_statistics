@@ -51,7 +51,7 @@ A diffusion process describes the spread of particles (or probabilities) over ti
   q(x_t | x_{t-1}) = \mathcal{N}(x_t; \sqrt{\alpha_t} x_{t-1}, (1-\alpha_t)I)
   ```
   
-  ```{figure} ../images/markov_chain.png
+  ```{figure} ./images/markov_chain.png
   ---
   :height: 80px
   :name: markov_chain_forward_process
