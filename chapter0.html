@@ -403,6 +403,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimating-expectations">Estimating Expectations:</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remarks">9. Remarks</a></li>
 </ul>
             </nav>
         </div>
@@ -472,15 +473,13 @@ diffusion models will be emphasized in following chapters.</p>
 <li><p><strong>Forward Process</strong>:</p>
 <div class="math notranslate nohighlight">
 \[q(x_t | x_{t-1}) = \mathcal{N}(x_t; \sqrt{\alpha_t} x_{t-1}, (1-\alpha_t)I)\]</div>
-</li>
-</ul>
-<figure class="align-default" id="markov-chain-forward-process">
-<a class="reference internal image-reference" href="../images/markov_chain.jpg"><img alt="../images/markov_chain.jpg" src="../images/markov_chain.jpg" style="height: 80px;" /></a>
+<figure class="align-default" id="id2">
+<img alt="../images/markov_chain.png" src="../images/markov_chain.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">With certain transition probability <span class="math notranslate nohighlight">\(q\)</span>, the <strong>forward process</strong> gradually add noise to the image <span class="math notranslate nohighlight">\(x_0\)</span> since time <span class="math notranslate nohighlight">\(t=0\)</span>, and finally it becomes pure noise <span class="math notranslate nohighlight">\(x_T\)</span> at time <span class="math notranslate nohighlight">\(T\)</span>.</span><a class="headerlink" href="#markov-chain-forward-process" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">With certain transition probability <span class="math notranslate nohighlight">\(q\)</span>, the <strong>forward process</strong> gradually add noise to the image <span class="math notranslate nohighlight">\(x_0\)</span> since time <span class="math notranslate nohighlight">\(t=0\)</span>, and finally it becomes pure noise <span class="math notranslate nohighlight">\(x_T\)</span> at   time <span class="math notranslate nohighlight">\(T\)</span>.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<ul>
+</li>
 <li><p><strong>Reverse Process</strong>:</p>
 <div class="math notranslate nohighlight">
 \[p(x_{t-1} | x_t) = \mathcal{N}(x_{t-1}; \mu_\theta(x_t, t), \Sigma_\theta(t))\]</div>
@@ -599,24 +598,21 @@ In the <strong>reverse process</strong> of diffusion models, solving these SDEs 
 <ul>
 <li><p>In many cases, the exact expectation <span class="math notranslate nohighlight">\(\mathbb{E}[f(x)]\)</span> under some probability distribution <span class="math notranslate nohighlight">\(p(x)\)</span> is difficult to compute analytically. Instead, Monte Carlo methods estimate this expectation by drawing samples <span class="math notranslate nohighlight">\(x_1, x_2, \dots, x_N\)</span> from the distribution <span class="math notranslate nohighlight">\(p(x)\)</span>, and using the empirical average:</p>
 <div class="math notranslate nohighlight">
-\[\]</div>
-</li>
+\[\mathbb{E}[f(x)] \approx \frac{1}{N} \sum_{i=1}^{N} f(x_i),\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f(x)\)</span>: A function whose expectation you want to compute.</p></li>
+<li><p><span class="math notranslate nohighlight">\(N\)</span>: The total number of samples drawn.</p></li>
+<li><p><span class="math notranslate nohighlight">\(x_i\)</span>: Samples drawn from the distribution <span class="math notranslate nohighlight">\(p(x)\)</span>.</p></li>
 </ul>
-<p>\mathbb{E}[f(x)] \approx \frac{1}{N} \sum_{i=1}^{N} f(x_i),</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>where:
-- $f(x)$: A function whose expectation you want to compute.
-- $N$: The total number of samples drawn.
-- $x_i$: Samples drawn from the distribution $p(x)$.
-
-- In diffusion models, during training (**forward process**), random noise is added to the data at each time step $t$, typically sampled from a Gaussian distribution. Monte Carlo Sampling can be used to approximate how this noise impacts the data; Monte Carlo Sampling can be employed to approximate the **reverse process** by drawing samples from the variational posterior $q(x_{1:T} | x_0)$, especially when computing the expectation over possible latent variables or noisy data.
-
-
-(chapter0.9)=
-## 9. Remarks
-Notice that all the terminologies above are brief and at a introductory level, and are by no means rigorous definitions. If you want to know more about them, please refer to the **Wikipedia page** of those concepts. Cheers!
-</pre></div>
-</div>
+</li>
+<li><p>In diffusion models, during training (<strong>forward process</strong>), random noise is added to the data at each time step <span class="math notranslate nohighlight">\(t\)</span>, typically sampled from a Gaussian distribution. Monte Carlo Sampling can be used to approximate how this noise impacts the data; Monte Carlo Sampling can be employed to approximate the <strong>reverse process</strong> by drawing samples from the variational posterior <span class="math notranslate nohighlight">\(q(x_{1:T} | x_0)\)</span>, especially when computing the expectation over possible latent variables or noisy data.</p></li>
+</ul>
 </section>
+</section>
+<section id="remarks">
+<span id="chapter0-9"></span><h2>9. Remarks<a class="headerlink" href="#remarks" title="Link to this heading">#</a></h2>
+<p>Notice that all the terminologies above are brief and at a introductory level, and are by no means rigorous definitions. If you want to know more about them, please refer to the <strong>Wikipedia page</strong> of those concepts. Cheers!</p>
 </section>
 </section>
 
@@ -706,6 +702,7 @@ Notice that all the terminologies above are brief and at a introductory level, a
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimating-expectations">Estimating Expectations:</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remarks">9. Remarks</a></li>
 </ul>
   </nav></div>
 
