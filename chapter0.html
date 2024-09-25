@@ -413,7 +413,7 @@ The <strong>forward process</strong> introduces noise, while the
 <li><strong>Forward Process</strong>:
 <code>{math}   q(x_t | x_{t-1}) = \mathcal{N}(x_t; \sqrt{\alpha_t} x_{t-1}, (1-\alpha_t)I)</code></li>
 </ul>
-<p>```{figure} ../images/markov_chain.png :height: 80px :name:
+<p>```{figure} ../images/markov_chain.jpg :height: 80px :name:
 markov_chain_forward_process</p>
 <p>With certain transition probability <span class="math inline">\(q\)</span>, the <strong>forward process</strong>
 gradually add noise to the image <span class="math inline">\(x_0\)</span> since time <span class="math inline">\(t=0\)</span>, and finally it becomes pure noise
@@ -461,35 +461,28 @@ distributed with mean zero and variance proportional to <span class="math inline
 <div id="ito-calculus" class="section level3">
 <h3>Ito Calculus:</h3>
 <ul>
-<li><strong>Ito Calculus</strong> is a branch of stochastic calculus
+<li><p><strong>Ito Calculus</strong> is a branch of stochastic calculus
 that extends traditional calculus to deal with the randomness introduced
 by processes like the Wiener process. It is specifically designed to
 handle stochastic differential equations (SDEs), which are central to
-diffusion models.</li>
-<li><strong>Ito’s Lemma</strong> is the stochastic calculus counterpart
-of the chain rule in classical calculus. If <span class="math inline">\(f\)</span> is a twice-differentiable function and
+diffusion models.</p></li>
+<li><p><strong>Ito’s Lemma</strong> is the stochastic calculus
+counterpart of the chain rule in classical calculus. If <span class="math inline">\(f\)</span> is a twice-differentiable function and
 <span class="math inline">\(X_t\)</span> is a stochastic process
-described by the SDE: <span class="math display">\[
-dX_t = \mu(X_t, t) dt + \sigma(X_t, t) dW_t
-\]</span> Then Ito’s Lemma gives the differential for <span class="math inline">\(f(X_t, t)\)</span>: <span class="math display">\[
-df(X_t, t) = \frac{\partial f}{\partial X_t} dX_t + \frac{\partial
-f}{\partial t} dt + \frac{1}{2} \sigma^2(X_t, t) \frac{\partial^2
-f}{\partial X_t^2} dt
-\]</span></li>
-<li>The <strong>Ito integral</strong> is defined differently from
+described by the SDE:
+<code>{math}   dX_t = \mu(X_t, t) dt + \sigma(X_t, t) dW_t</code></p>
+<p>Then Ito’s Lemma gives the differential for <span class="math inline">\(f(X_t, t)\)</span>:
+<code>{math} df(X_t, t) = \frac{\partial f}{\partial X_t} dX_t + \frac{\partial f}{\partial t} dt + \frac{1}{2} \sigma^2(X_t, t) \frac{\partial^2 f}{\partial X_t^2} dt</code></p></li>
+<li><p>The <strong>Ito integral</strong> is defined differently from
 classical Riemann integrals due to the non-differentiability of the
 Wiener process. For a stochastic process <span class="math inline">\(X(t)\)</span> and a Wiener process <span class="math inline">\(W(t)\)</span>, the Ito integral is written as:
-<span class="math display">\[
-\int_0^t X(s) dW(s)
-\]</span> This integral represents the cumulative effect of random
-fluctuations up to time <span class="math inline">\(t\)</span>, and it
-is used to solve SDEs.</li>
-<li>In the context of diffusion models, the <strong>stochastic
+<code>{math}   \int_0^t X(s) dW(s)</code> This integral represents the
+cumulative effect of random fluctuations up to time <span class="math inline">\(t\)</span>, and it is used to solve SDEs.</p></li>
+<li><p>In the context of diffusion models, the <strong>stochastic
 differential equations</strong> describe the evolution of the data as it
 undergoes noise injection or denoising. These equations typically take
-the form: <span class="math display">\[
-dx_t = \mu(x_t, t) dt + \sigma(t) dW_t
-\]</span> where:
+the form: <code>{math}   dx_t = \mu(x_t, t) dt + \sigma(t) dW_t</code>
+where:</p>
 <ul>
 <li><span class="math inline">\(\mu(x_t, t)\)</span> represents the
 deterministic drift term (direction of movement),</li>
@@ -504,9 +497,7 @@ the original data distribution by progressively removing noise.</li>
 <p>(chapter0.5)= ## 6. <strong>KL Divergence</strong> The
 <strong>Kullback-Leibler (KL) Divergence</strong> measures the
 difference between two probability distributions <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>:</p>
-<p><span class="math display">\[
-D_{KL}(P || Q) = \int P(x) \log \frac{P(x)}{Q(x)} dx
-\]</span></p>
+<p><code>{math} D_{KL}(P || Q) = \int P(x) \log \frac{P(x)}{Q(x)} \, dx</code></p>
 <p>KL divergence is often used in diffusion models to minimize the
 difference between the true distribution and the model distribution.</p>
 <p>(chapter0.7)= ## 7. <strong>Variational Inference</strong></p>
@@ -529,10 +520,9 @@ which is simpler to compute.</li>
 <strong>Evidence Lower Bound (ELBO)</strong>, a quantity that provides a
 lower bound to the likelihood of the observed data. Maximizing the ELBO
 indirectly helps approximate the true posterior distribution.</p></li>
-<li><p>The ELBO is given by: <span class="math display">\[
-\mathcal{L} = \mathbb{E}_q \left[ \log p_\theta(x_0 | x_t) -
-D_{KL}(q(x_{1:T} | x_0) || p_\theta(x_{1:T})), \right]
-\]</span> where:</p>
+<li><p>The ELBO is given by:
+<code>{math}   \mathcal{L} = \mathbb{E}_q \left[ \log p_\theta(x_0 | x_t) - D_{KL}(q(x_{1:T} | x_0) || p_\theta(x_{1:T})), \right]</code>
+where:</p>
 <ul>
 <li><span class="math inline">\(p_\theta(x_0 | x_t)\)</span>: The
 likelihood of the data given the noisy version at time <span class="math inline">\(t\)</span>, parameterized by <span class="math inline">\(\theta\)</span>.</li>
@@ -593,13 +583,12 @@ distribution <span class="math inline">\(p(x)\)</span> is difficult to
 compute analytically. Instead, Monte Carlo methods estimate this
 expectation by drawing samples <span class="math inline">\(x_1, x_2,
 \dots, x_N\)</span> from the distribution <span class="math inline">\(p(x)\)</span>, and using the empirical average:
-<span class="math display">\[
-\mathbb{E}[f(x)] \approx \frac{1}{N} \sum_{i=1}^{N} f(x_i),
-\]</span> where:
+<code>{math} \mathbb{E}[f(x)] \approx \frac{1}{N} \sum_{i=1}^{N} f(x_i),</code>
+where:
 <ul>
 <li><span class="math inline">\(f(x)\)</span>: A function whose
 expectation you want to compute.</li>
-<li><span class="math inline">\(N\)</span>: The number of samples
+<li><span class="math inline">\(N\)</span>: The total number of samples
 drawn.</li>
 <li><span class="math inline">\(x_i\)</span>: Samples drawn from the
 distribution <span class="math inline">\(p(x)\)</span>.</li>
