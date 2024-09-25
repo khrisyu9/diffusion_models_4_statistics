@@ -51,12 +51,13 @@ A diffusion process describes the spread of particles (or probabilities) over ti
   q(x_t | x_{t-1}) = \mathcal{N}(x_t; \sqrt{\alpha_t} x_{t-1}, (1-\alpha_t)I)
   ```
   
-```{figure} ../images/markov_chain.jpg
-:height: 80px
-:name: markov_chain_forward_process
-
-With certain transition probability $q$, the **forward process** gradually add noise to the image $x_0$ since time $t=0$, and finally it becomes pure noise $x_T$ at time $T$.
-```
+  ```{figure} ../images/markov_chain.png
+  ---
+  :height: 80px
+  :name: markov_chain_forward_process
+  ---
+  With certain transition probability $q$, the **forward process** gradually add noise to the image $x_0$ since time $t=0$, and finally it becomes pure noise $x_T$ at   time $T$.
+  ```
   
 - **Reverse Process**:
   ```{math}
@@ -168,9 +169,9 @@ ii. **KL Divergence Term**:
 ### Estimating Expectations:
 - In many cases, the exact expectation $\mathbb{E}[f(x)]$ under some probability distribution $p(x)$ is difficult to compute analytically. Instead, Monte Carlo methods estimate this expectation by drawing samples $x_1, x_2, \dots, x_N$ from the distribution $p(x)$, and using the empirical average:
   ```{math}
-\mathbb{E}[f(x)] \approx \frac{1}{N} \sum_{i=1}^{N} f(x_i),
+  \mathbb{E}[f(x)] \approx \frac{1}{N} \sum_{i=1}^{N} f(x_i),
   ```
-where:
+  where:
   - $f(x)$: A function whose expectation you want to compute.
   - $N$: The total number of samples drawn.
   - $x_i$: Samples drawn from the distribution $p(x)$.
